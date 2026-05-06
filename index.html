@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AOS GPS Navigácia</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: false;">
+
+      <a-text
+        value="JEDALEN AOS"
+        scale="15 15 15"
+        look-at="[gps-camera]"
+        align="center"
+        color="#FFFFFF"
+        background="#000000"
+        gps-entity-place="latitude: 49.07520; longitude: 19.58410;">
+      </a-text>
+
+      <a-text
+        value="INTRAKY BLOK A"
+        scale="15 15 15"
+        look-at="[gps-camera]"
+        align="center"
+        color="#00CCFF"
+        gps-entity-place="latitude: 49.07580; longitude: 19.58350;">
+      </a-text>
+
+      <a-text
+        value="INTRAKY BLOK B"
+        scale="15 15 15"
+        look-at="[gps-camera]"
+        align="center"
+        color="#00CCFF"
+        gps-entity-place="latitude: 49.07620; longitude: 19.58380;">
+      </a-text>
+
+      <a-text
+        value="SPOJOVACI KRCOK"
+        scale="12 12 12"
+        look-at="[gps-camera]"
+        align="center"
+        color="#FFCC00"
+        gps-entity-place="latitude: 49.07550; longitude: 19.58390;">
+      </a-text>
+
+      <a-camera gps-camera rotation-reader></a-camera>
+
+    </a-scene>
+  </body>
+</html>
