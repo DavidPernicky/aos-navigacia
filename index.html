@@ -40,7 +40,10 @@
         <a-text value="SPOJOVACI KRCOKk" align="center" color="#FFCC00" width="4" position="0 0 0.15" material="depthTest: false"></a-text>
       </a-entity>
 
-      <a-camera gps-camera rotation-reader></a-camera>
+      <a-camera 
+        gps-camera="gpsMinDistance: 5; minAccuracy: 50; alert: true;" 
+        rotation-reader>
+      </a-camera>
 
     </a-scene>
   </body>
